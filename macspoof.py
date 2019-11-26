@@ -6,7 +6,7 @@ import os
 import time
  
 try:
-        interface = raw_input("Please enter your target networkiInterface: ")
+        interface = raw_input("Please enter your target network interface: ")
         target_ip = raw_input("Please enter your victim's IP address: ")
         router_ip = raw_input("Please enter your victim's router IP address: ")
 except KeyboardInterrupt:
@@ -55,7 +55,7 @@ def mitm():
                 print ("Exiting")
                 sys.exit(1)
         print ("\nMac address spoof is now live!")   
-	print ("(Please check the ARP table on your victim by typing arp -a on the target's CMD.)") 
+	print ("Please check the ARP table on your victim by typing arp -a on the target's CMD.") 
 	print ("To stop the MAC spoof attack, please press ctrl + c")   
         while 1:
                 try:
