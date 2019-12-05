@@ -27,7 +27,7 @@ def reARP():
         print ("\nEverthing is going back to normal")
         target_mac = find_mac(target_ip)
         gatemac = find_mac(router_ip)
-        send(ARP(op = 2, pdst = router_ip, psrc = target_ip, hwdst = "ff:ff:ff:ff:ff:ff", hwsrc = victimMAC), count = 7)
+        send(ARP(op = 2, pdst = router_ip, psrc = target_ip, hwdst = "ff:ff:ff:ff:ff:ff", hwsrc = target_mac), count = 7)
         send(ARP(op = 2, pdst = target_ip, psrc = router_ip, hwdst = "ff:ff:ff:ff:ff:ff", hwsrc = gatemac), count = 7)
         os.system("echo 0 > /proc/sys/net/ipv4/ip_forward")
         print ("Mac address spoof has been stopped.")
